@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "WrUAqCvgbsV/+46AczdTeEWwZirY3W7rdmwEPVNMJH0=",
+  "Source": "FoodApi",
+  "BasePath": "_content/FoodApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
