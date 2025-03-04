@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\web_restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj": {}
+    "C:\\code\\Project\\Web_Restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj": {}
   },
   "projects": {
-    "C:\\code\\web_restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj": {
+    "C:\\code\\Project\\Web_Restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\web_restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj",
+        "projectUniqueName": "C:\\code\\Project\\Web_Restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj",
         "projectName": "FoodApi",
-        "projectPath": "C:\\code\\web_restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj",
+        "projectPath": "C:\\code\\Project\\Web_Restaurant\\WebRestaurant\\FoodApi\\FoodApi.csproj",
         "packagesPath": "C:\\Users\\Beer\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\web_restaurant\\WebRestaurant\\FoodApi\\obj\\",
+        "outputPath": "C:\\code\\Project\\Web_Restaurant\\WebRestaurant\\FoodApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
