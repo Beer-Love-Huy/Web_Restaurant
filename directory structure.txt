@@ -1,0 +1,108 @@
+MySolution/
+├── src/
+│   ├── Services/                            # Các Microservice riêng biệt
+│   │   ├── MenuService/
+│   │   │   ├── Menu.API/                    # Main API Project
+│   │   │   │   ├── Controllers/
+│   │   │   │   ├── Models/                  # DTOs, Entities, Mapping
+│   │   │   │   ├── Services/                # Application logic
+│   │   │   │   ├── Repositories/            # Data Access
+│   │   │   │   ├── Data/                    # DbContext, Migrations
+│   │   │   │   ├── Infrastructure/          # Configs, Extensions
+│   │   │   │   ├── Program.cs
+│   │   │   │   └── appsettings.json
+│   │   │   ├── Menu.Tests/                  # Unit & Integration tests
+│   │   │   └── Menu.Contracts/              # Event Contracts (Event-driven)
+│   │   │
+│   │   ├── OrderService/
+│   │   ├── UserService/
+│   │   ├── ReservationService/
+│   │   └── PaymentService/
+│
+│   ├── BuildingBlocks/                     # Tái sử dụng dùng chung
+│   │   ├── Common.Logging/
+│   │   ├── Common.Messaging/               # RabbitMQ, Kafka, Dapr
+│   │   ├── Common.Authentication/
+│   │   ├── Common.Storage/                 # AWS S3, Azure Blob
+│   │   └── Common.Grpc/                    # Shared gRPC Contracts (nếu có)
+│
+│   ├── ApiGateways/                        # API Gateway / BFF
+│   │   ├── PublicGateway/                  # Dùng cho Web, Mobile
+│   │   ├── InternalGateway/                # Dùng giữa các service
+│   │   ├── BFF/                             # Backend for Frontend (tùy chọn)
+│   │   └── Ocelot.json                      # Cấu hình Gateway (Ocelot)
+│
+│   ├── WebApps/                            # UI apps
+│   │   ├── AdminApp/                        # React/Blazor Angular cho Admin
+│   │   ├── CustomerApp/                     # Web hoặc Mobile client
+│   │   └── MobileApp/                       # Flutter, React Native
+│
+├── tests/                                  # Test tập trung
+│   ├── IntegrationTests/
+│   ├── ContractTests/                      # Pact, Dapr, gRPC Contract Testing
+│   ├── PerformanceTests/                   # k6, JMeter
+│   ├── SecurityTests/                      # OWASP ZAP, Dependency Check
+│   └── Common.Tests/
+│
+├── deploy/                                 # DevOps: CI/CD, Infra
+│   ├── docker-compose.yml
+│   ├── kubernetes/                         # Helm Charts, K8s YAML
+│   ├── terraform/                          # IaC nếu cần Cloud
+│   └── ci-cd/                              # GitHub Actions, GitLab CI
+│
+├── tools/                                  # Công cụ dev, migrate
+│   ├── migrations/
+│   ├── swagger/
+│   └── devtools/
+│
+├── docs/                                   # Tài liệu dự án
+│   ├── api/
+│   ├── architecture/
+│   ├── decisions/                          # ADR - Architecture Decision Records
+│   └── security/
+│
+├── .sln                                     # Solution file
+├── README.md
+
+
+
+Client → API Gateway → [Load Balancer] → Microservices (Food/User/Order)
+                                     ↓
+                              Shared Services
+                        (Logging, Auth, Messaging)
+
+
+Food.API/
+  ├── Controllers/
+  │   └── FoodController.cs
+  Models/
+  ├── Entities/           
+  │   ├── Food.cs
+  │   └── FoodType.cs    
+  ├── DTOs/              
+  │   ├── FoodDto.cs
+  │   └── CreateFoodDto.cs
+  └── Context/           
+  │   └── ApplicationDbContext.cs
+  ├── Services/
+  │   ├── Interfaces/
+  │   │   └── IFoodService.cs
+  │   └── Implementations/
+  │       └── FoodService.cs
+  ├── Repositories/
+  │   ├── Interfaces/
+  │   │   └── IFoodRepository.cs
+  │   └── Implementations/
+  │       └── FoodRepository.cs
+  ├── Infrastructure/
+  │   ├── Configurations/
+  │   │   └── FoodConfiguration.cs
+  │   └── Extensions/
+  │       └── ServiceCollectionExtensions.cs
+
+
+
+
+
+Client → Controller → Service → Repository → Database
+Response ← Controller ← Service ← Repository ← Database

@@ -1,0 +1,65 @@
+Solution 'WebRestaurant' (3 of 3 projects)
+├── Src
+│   ├── Services
+│   │   └── MenuService
+│   │       ├── MenuAPI
+│   │       │   ├── Connected Services
+│   │       │   ├── Dependencies
+│   │       │   ├── Properties
+│   │       │   ├── Controllers
+│   │       │   │   ├── FoodController.cs
+│   │       │   │   └── FoodTypeController.cs
+│   │       │   ├── Data
+│   │       │   │   └── Context
+│   │       │   │       └── ApplicationDbContext.cs
+│   │       │   ├── Database
+│   │       │   │   └── MenuService.sql
+│   │       │   ├── Infrastructure
+│   │       │   │   ├── Exceptions
+│   │       │   │   │   ├── BadRequestException.cs
+│   │       │   │   │   ├── BaseException.cs
+│   │       │   │   │   ├── NotFoundException.cs
+│   │       │   │   │   ├── UnauthorizedException.cs
+│   │       │   │   │   └── ValidationException.cs
+│   │       │   │   └── Middleware
+│   │       │   │       ├── ExceptionMiddleware.cs
+│   │       │   │       └── ExtendedProblemDetails.cs
+│   │       │   ├── Models
+│   │       │   │   ├── DTOs
+│   │       │   │   │   ├── CreateFoodDto.cs
+│   │       │   │   │   ├── CreateFoodTypeDto.cs
+│   │       │   │   │   ├── FoodDto.cs
+│   │       │   │   │   ├── FoodTypeDto.cs
+│   │       │   │   │   ├── UpdateFoodDto.cs
+│   │       │   │   │   └── UpdateFoodTypeDto.cs
+│   │       │   │   ├── Entities
+│   │       │   │   │   ├── Food.cs
+│   │       │   │   │   └── FoodType.cs
+│   │       │   │   └── Mapping
+│   │       │   │       ├── FoodProfile.cs
+│   │       │   │       └── FoodTypeProfile.cs
+│   │       │   ├── Repositories
+│   │       │   │   ├── Implementations
+│   │       │   │   │   ├── FoodRepository.cs
+│   │       │   │   │   └── FoodTypeRepository.cs
+│   │       │   │   └── Interface
+│   │       │   │       ├── IFoodRepository.cs
+│   │       │   │       └── IFoodTypeRepository.cs
+│   │       │   ├── Services
+│   │       │   │   ├── Implementations
+│   │       │   │   │   ├── FoodService.cs
+│   │       │   │   │   └── FoodTypeService.cs
+│   │       │   │   └── Interfaces
+│   │       │   ├── Validators
+│   │       │   │   ├── FoodTypeValidators
+│   │       │   │   │   ├── CreateFoodTypeDtoValidator.cs
+│   │       │   │   │   └── UpdateFoodTypeDtoValidator.cs
+│   │       │   │   ├── FoodValidators
+│   │       │   │   │   ├── CreateFoodDtoValidator.cs
+│   │       │   │   │   └── UpdateFoodDtoValidator.cs
+│   │       │   │   └── ValidatorMessages.cs
+│   │       │   ├── appsettings.json
+│   │       │   ├── MenuAPI.http
+│   │       │   └── Program.cs
+│   │       ├── MenuContracts
+│   │       └── MenuTests

@@ -1,0 +1,16 @@
+﻿using AutoMapper;
+using MenuAPI.Models.DTOs;
+using MenuAPI.Models.Entities;
+
+namespace MenuAPI.Models.Mapping
+{
+    public class FoodTypeProfile : Profile
+    {
+        public FoodTypeProfile()
+        {
+            CreateMap<FoodType, FoodTypeDto>().ReverseMap();
+            CreateMap<FoodType, CreateFoodTypeDto>().ReverseMap();
+            CreateMap<FoodType, UpdateFoodTypeDto>().ReverseMap();
+        }
+    }
+}

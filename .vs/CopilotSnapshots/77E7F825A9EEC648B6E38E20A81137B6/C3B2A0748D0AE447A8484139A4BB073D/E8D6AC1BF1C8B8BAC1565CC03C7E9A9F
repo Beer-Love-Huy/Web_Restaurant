@@ -1,0 +1,74 @@
+﻿using AutoMapper;
+using MenuAPI.Models.DTOs;
+using MenuAPI.Models.Entities;
+using MenuAPI.Repositories.Interface;
+using MenuAPI.Services.Interfaces;
+
+namespace MenuAPI.Services.Implementations
+{
+    public class FoodTypeService : IFoodTypeService
+    {
+        private readonly IFoodTypeRepository _foodTypeRepository;
+        private readonly IMapper _mapper;
+
+        public FoodTypeService(IFoodTypeRepository foodTypeRepository, IMapper mapper)
+        {
+            _foodTypeRepository = foodTypeRepository;
+            _mapper = mapper;
+        }
+
+        public async Task<IEnumerable<FoodTypeDto>> GetAllAsync()
+        {
+            var foodtypes = await _foodTypeRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<FoodTypeDto>>(foodtypes);
+        }
+
+        public async Task<FoodTypeDto> GetByIdAsync(int id)
+        {
+            var food = _foodTypeRepository.GetByIdAsync(id);
+            if(food == null)
+            {
+                return null;
+            }
+            return _mapper.Map<FoodTypeDto>(food);
+        }
+
+        public async Task<FoodTypeDto> CreateAsync(CreateFoodTypeDto createFoodTypeDto)
+        {
+            var foodTypeEntity = _mapper.Map<FoodType>(createFoodTypeDto);
+            var createdFoodType = await _foodTypeRepository.CreateAsync(foodTypeEntity);
+            return _mapper.Map<FoodTypeDto>(createdFoodType); 
+        }
+
+        public async Task<FoodTypeDto> UpdateAsync(int id,UpdateFoodTypeDto updateFoodTypeDto)
+        {
+            if(id != updateFoodTypeDto.IdFoodType)
+            {
+                throw new ArgumentException("IdFoodType in URL does not match Id in the body");
+            }
+
+            var foodtype = await _foodTypeRepository.GetByIdAsync(id);
+            if(foodtype == null)
+            {
+                throw new ArgumentException($"FoodType with id {updateFoodTypeDto.IdFoodType} not found");
+            }
+
+            var foodTypeEntity = _mapper.Map<FoodType>(updateFoodTypeDto);
+            foodTypeEntity.IdFoodType = id;
+            var updatedFood = await _foodTypeRepository.UpdateAsync(foodTypeEntity);
+            return _mapper.Map<FoodTypeDto>(updatedFood);
+        }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            var foodtype = _foodTypeRepository.GetByIdAsync(id);
+            if(foodtype == null)
+            {
+                throw new ArgumentException($"FoodType with id {id} not found");
+            }
+            return await _foodTypeRepository.DeleteAsync(id);
+        }
+    }
+}
+     
+    
