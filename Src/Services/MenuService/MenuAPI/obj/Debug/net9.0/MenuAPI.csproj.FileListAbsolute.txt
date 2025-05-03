@@ -112,3 +112,4 @@ C:\Code\Project\WebRestaurant\Src\Services\MenuService\MenuAPI\obj\Debug\net9.0\
 C:\Code\Project\WebRestaurant\Src\Services\MenuService\MenuAPI\bin\Debug\net9.0\FluentValidation.dll
 C:\Code\Project\WebRestaurant\Src\Services\MenuService\MenuAPI\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
 C:\Code\Project\WebRestaurant\Src\Services\MenuService\MenuAPI\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Code\Project\WebRestaurant\Src\Services\MenuService\MenuAPI\obj\Debug\net9.0\MenuAPI.sourcelink.json

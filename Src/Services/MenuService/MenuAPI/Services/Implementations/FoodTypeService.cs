@@ -65,19 +65,18 @@ namespace MenuAPI.Services.Implementations
             {
                 throw new BadRequestException(BadRequestException.IdFoodTypeMismatchMessage);
             }
-            if(await _foodTypeRepository.NameFoodTypeExistsAsync(updateFoodTypeDto.NameFoodType, id))
-            {
-                throw new BadRequestException(BadRequestException.NameFoodTypeAreadyExistsMessage);
-            }
             var foodtype = await _foodTypeRepository.GetByIdAsync(id);
-            if(foodtype == null)
+            if (foodtype == null)
             {
                 throw new NotFoundException(NotFoundException.IdFoodTypeNotFoundMessage);
             }
+            if (await _foodTypeRepository.NameFoodTypeExistsAsync(updateFoodTypeDto.NameFoodType, id))
+            {
+                throw new BadRequestException(BadRequestException.NameFoodTypeAreadyExistsMessage);
+            }
 
-            var foodTypeEntity = _mapper.Map<FoodType>(updateFoodTypeDto); 
-            foodTypeEntity.IdFoodType = id;
-            var updatedFood = await _foodTypeRepository.UpdateAsync(foodTypeEntity);
+            _mapper.Map(updateFoodTypeDto, foodtype); 
+            var updatedFood = await _foodTypeRepository.UpdateAsync(foodtype);
             return _mapper.Map<FoodTypeDto>(updatedFood);
         }
 

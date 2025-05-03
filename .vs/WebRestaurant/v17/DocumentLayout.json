@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Code\\Project\\WebRestaurant\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|c:\\code\\project\\webrestaurant\\src\\services\\menuservice\\menuapi\\repositories\\inplementations\\foodtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|solutionrelative:src\\services\\menuservice\\menuapi\\repositories\\inplementations\\foodtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|c:\\code\\project\\webrestaurant\\src\\services\\menuservice\\menuapi\\repositories\\inplementations\\foodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|solutionrelative:src\\services\\menuservice\\menuapi\\repositories\\inplementations\\foodrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|c:\\code\\project\\webrestaurant\\src\\services\\menuservice\\menuapi\\services\\implementations\\foodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|solutionrelative:src\\services\\menuservice\\menuapi\\services\\implementations\\foodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|c:\\code\\project\\webrestaurant\\src\\services\\menuservice\\menuapi\\models\\dtos\\updatefooddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|solutionrelative:src\\services\\menuservice\\menuapi\\models\\dtos\\updatefooddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|c:\\code\\project\\webrestaurant\\src\\services\\menuservice\\menuapi\\controllers\\foodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|solutionrelative:src\\services\\menuservice\\menuapi\\controllers\\foodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|c:\\code\\project\\webrestaurant\\src\\services\\menuservice\\menuapi\\infrastructure\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|solutionrelative:src\\services\\menuservice\\menuapi\\infrastructure\\exceptions\\badrequestexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|c:\\code\\project\\webrestaurant\\src\\services\\menuservice\\menuapi\\services\\implementations\\foodtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D69ED9D-14C8-4D68-8CAE-0A3837B8FBCD}|Src\\Services\\MenuService\\MenuAPI\\MenuAPI.csproj|solutionrelative:src\\services\\menuservice\\menuapi\\services\\implementations\\foodtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,52 +38,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateFoodDto.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Models\\DTOs\\UpdateFoodDto.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\MenuAPI\\Models\\DTOs\\UpdateFoodDto.cs",
-              "ToolTip": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Models\\DTOs\\UpdateFoodDto.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\MenuAPI\\Models\\DTOs\\UpdateFoodDto.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FoodTypeRepository.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodTypeRepository.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodTypeRepository.cs",
+              "ToolTip": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodTypeRepository.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodTypeRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T15:10:11.781Z"
+              "WhenOpened": "2025-05-03T03:07:02.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FoodRepository.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodRepository.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodRepository.cs",
+              "ToolTip": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodRepository.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\MenuAPI\\Repositories\\Inplementations\\FoodRepository.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAADwv1UAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T03:08:51.838Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FoodController.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Controllers\\FoodController.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\MenuAPI\\Controllers\\FoodController.cs",
-              "ToolTip": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Controllers\\FoodController.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\MenuAPI\\Controllers\\FoodController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAqwD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T15:08:57.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "FoodService.cs",
               "DocumentMoniker": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodService.cs",
               "RelativeDocumentMoniker": "Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodService.cs",
               "ToolTip": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodService.cs",
               "RelativeToolTip": "Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodService.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAwE0AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAswG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T13:44:41.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T03:05:54.681Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BadRequestException.cs",
-              "DocumentMoniker": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Infrastructure\\Exceptions\\BadRequestException.cs",
-              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\MenuAPI\\Infrastructure\\Exceptions\\BadRequestException.cs",
-              "ToolTip": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Infrastructure\\Exceptions\\BadRequestException.cs",
-              "RelativeToolTip": "Src\\Services\\MenuService\\MenuAPI\\Infrastructure\\Exceptions\\BadRequestException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "Title": "FoodTypeService.cs",
+              "DocumentMoniker": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodTypeService.cs",
+              "RelativeDocumentMoniker": "Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodTypeService.cs",
+              "ToolTip": "C:\\Code\\Project\\WebRestaurant\\Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodTypeService.cs",
+              "RelativeToolTip": "Src\\Services\\MenuService\\MenuAPI\\Services\\Implementations\\FoodTypeService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwE4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T14:21:26.654Z"
+              "WhenOpened": "2025-05-03T02:59:20.612Z"
             }
           ]
         }

@@ -11,23 +11,22 @@ namespace MenuAPI.Repositories.Inplementations
     public class FoodRepository : IFoodRepository
     {
         private readonly ApplicationDbContext _context;
-        private readonly IMapper _mapper;
 
-        public FoodRepository(ApplicationDbContext context, IMapper mapper)
+        public FoodRepository(ApplicationDbContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         public async Task<IEnumerable<Food>> GetAllAsync()
         {
-            return await _context.Foods.Include(f => f.FoodType).ToListAsync();
+            return await _context.Foods.AsNoTracking().Include(f => f.FoodType).ToListAsync();
         }
 
 
         public async Task<Food?> GetByIdAsync(int id)
         {
             return await _context.Foods
+                .AsNoTracking()
                 .Include(f => f.FoodType)
                 .FirstOrDefaultAsync(f => f.IdFood == id);
         }
@@ -35,6 +34,7 @@ namespace MenuAPI.Repositories.Inplementations
         public async Task<IEnumerable<Food>> GetByIdFoodTypeAsync(int idFoodType)
         {
             return await _context.Foods
+                .AsNoTracking()
                 .Include(f => f.FoodType)
                 .Where(f => f.IdFoodType == idFoodType)
                 .ToListAsync();
@@ -49,11 +49,6 @@ namespace MenuAPI.Repositories.Inplementations
 
         public async Task<Food> UpdateAsync(Food food)
         {
-            var existingEntity = await _context.Foods.FindAsync(food.IdFood);
-            if (existingEntity != null)
-            {
-                _context.Entry(existingEntity).State = EntityState.Detached;
-            }
             _context.Foods.Update(food);
             await _context.SaveChangesAsync();
             return food;
@@ -78,9 +73,17 @@ namespace MenuAPI.Repositories.Inplementations
 
         public async Task<bool> NameFoodExistsAsync(string nameFood, int? idFood = null)
         {
-            return await _context.Foods
-                .AnyAsync(f => f.NameFood.ToLower() == nameFood.ToLower()
-                && (!idFood.HasValue || f.IdFood != idFood.Value));
+            var query = _context.Foods.AsNoTracking();
+
+            if (idFood.HasValue)
+            {
+                return await query.AnyAsync(f =>
+                    f.NameFood.ToLower() == nameFood.ToLower() &&
+                    f.IdFood != idFood.Value);
+            }
+
+            return await query.AnyAsync(f =>
+                f.NameFood.ToLower() == nameFood.ToLower());
         }
     }
 }

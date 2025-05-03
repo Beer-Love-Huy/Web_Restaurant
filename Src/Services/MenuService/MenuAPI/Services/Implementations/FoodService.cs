@@ -95,9 +95,8 @@ namespace MenuAPI.Services.Implementations
                 throw new NotFoundException(NotFoundException.IdFoodTypeNotFoundMessage);
             }
 
-            var foodEntity = _mapper.Map<Food>(updateFoodDto);
-            foodEntity.IdFood = id;
-            var updatedFood = await _foodRepository.UpdateAsync(foodEntity);
+            _mapper.Map(updateFoodDto,food);
+            var updatedFood = await _foodRepository.UpdateAsync(food);
             return _mapper.Map<FoodDto>(updatedFood);
         }
 

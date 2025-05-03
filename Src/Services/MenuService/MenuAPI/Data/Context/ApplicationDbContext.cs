@@ -9,7 +9,7 @@ namespace MenuAPI.Models.Context
             : base(options)
         {
         }
-
+       
         public DbSet<Food> Foods { get; set; }
         public DbSet<FoodType> FoodTypes { get; set; }
 
